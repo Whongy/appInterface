@@ -1,0 +1,60 @@
+-
+  contractId: 2
+  symbol: ETH-USDT
+-
+  contractId: 15
+  symbol: LTC-USDT
+-
+  contractId: 1
+  symbol: BTC-USDT
+-
+  contractId: 14
+  symbol: DOGE-USDT
+-
+  contractId: 11
+  symbol: ETC-USDT
+-
+  contractId: 17
+  symbol: ADA-USDT
+-
+  contractId: 4
+  symbol: TRX-USDT
+-
+  contractId: 3
+  symbol: BCH-USDT
+-
+  contractId: 44
+  symbol: SOL-USDT
+-
+  contractId: 45
+  symbol: XML-USDT
+-
+  contractId: 8
+  symbol: BTC-USD
+-
+  contractId: 23
+  symbol: ETH-USD
+-
+  contractId: 41
+  symbol: LTC-USD
+-
+  contractId: 47
+  symbol: USO-USDT
+-
+  contractId: 51
+  symbol: UKO-USDT
+-
+  contractId: 53
+  symbol: XAU-USDT
+-
+  contractId: 47
+  symbol: XAG-USDT
+-
+  contractId: 49
+  symbol: NAS100-USDT
+-
+  contractId: 50
+  symbol: US30-USDT
+-
+  contractId: 48
+  symbol: JPN22-USDT
