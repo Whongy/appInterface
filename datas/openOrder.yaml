@@ -1,0 +1,31 @@
+-
+ 17: contractId
+ 30: leverageLevel
+ OPEN: OPEN
+ 2: positionType
+ 0.4555: price
+ BUY: side
+ 3: volume
+-
+ 11: contractId
+ 30: leverageLevel
+ OPEN: open
+ 2: positionType
+ 17.991: price
+ BUY: side
+ 3: volume
+-
+ 47: XAG-USDT
+ 20: leverageLevel
+ OPEN: OPEN
+ 2: positionType
+ 20.868: price
+ BUY: side
+ 3: volume
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 import os
-token = '99b931deac64153abd63a4387f2dd221d583933ee9894fbc88a5545f5da77d3d'
+token = '919a93cc03cd4a517f102054a9b7ce7d737ca8f4ff274f7da694c8f77898e54c'
 base_url='https://futuresappapi.coin-up.pro'
 os.environ['NO_PROXY'] = 'futuresappapi.coin-up.pro/position/get_assets_list'
 
