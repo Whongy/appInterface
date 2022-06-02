@@ -80,54 +80,42 @@ class TestUserConfig():
         assert msg == '成功'
 
 
+    @allure.title("用户总资产BTC核算")
+    def test_get_total_balance(self):
+        url = "https://appapi.coin-up.pro/finance/features/total_account_balance"
+        data = {"sign":"a482b287ccd12003024287d11957ca67","time":"1654075569327"}
+        data = json.dumps(data)
+
+        r = requests.post(url=url, headers=headers, data=data, verify=False)
+
+        msg = r.json()['msg']
+        logging.info(type(r))
+
+        print(json.loads(r.content))
+        assert msg =='Succeed'
 
 
-    #获取市场行情
-    #传入币对参数，获取对应价格
-    # @allure.title("行情列表")
-    # @pytest.mark.parametrize("contractId,symbol", yaml.safe_load(open("../datas/orderCreate.yaml")))
-    # def test_public_market_info(self,contractId,symbol):
-    #
-    #     url = self.base_url + "/common/public_market_info"
-    #     data = {"contractId":contractId,"sign":"8b6410c75c4d2cc549cad7fc5583a7b0","symbol":symbol,"time":"1652170832887"}
-    #     data = json.dumps(data)
-    #
-    #     r = requests.post(url=url, headers=headers, data=data, verify=False)
-    #     print(r.request.body)
-    #
-    #     indexPrice = json.dumps(r.json()["data"]["indexPrice"])
-    #     msg = r.json()['msg']
-    #
-    #     print(json.loads(r.content))
-    #     print(r.status_code)
-    #     print("指数价格:"+ indexPrice)
-    #     assert msg== '成功'
-    #
-    #     return indexPrice
-    #
-    # #U本位下单
-    # @allure.title("U本位下单")
-    # @pytest.mark.parametrize("contractId,leverageLevel,OPEN,positionType,price,side,volume", yaml.safe_load(open(
-    #     "../datas/openOrder.yaml")))
-    # def test_order_create(self,contractId,leverageLevel,OPEN,positionType,price,side,volume):
-    #     # print(contractId)
-    #     url = self.base_url + "/order/order_create"
-    #     data = {"contractId":contractId,"expireTime":14,"isConditionOrder":"false","isOto":"false", "leverageLevel":leverageLevel,"open":OPEN,"positionType":positionType,"price":price,"side":side,"sign":"05f4f1ee5804114bad987d56166d2175","stopLossPrice":"0","stopLossTrigger":"", "stopLossType":"2","takerProfitPrice":"0","takerProfitTrigger":"","takerProfitType":"2",  "time":"1652349756240","triggerPrice":"","type":1,"volume":volume}
-    #     data = json.dumps(data)
-    #
-    #     r = requests.post(url=url, headers=headers, data=data, verify=False)
-    #
-    #     msg =r.json()["msg"]
-    #     print("订单号:{}".format(json.loads(r.content)))
-    #     #
-    #     # ids = json.dumps(r.json()["data"]["ids"])
-    #     # ids = r.json()["data"]["ids"]
-    #     # print(ids)
-    #     # msg = r.json()['msg']
-    #     # print(ids)
-    #     # print(json.loads(r.content))
-    #     # print(r.status_code)
-    #     assert msg== '成功'
+    @allure.title("获取快捷买卖价格")
+    def test_get_quickly_buy_price(self):
+        url = "https://appapi.coin-up.pro/quickly_buy_coins/get_symbol_price"
+        data = {"getCoin": "AAVE", "payCoin": "AUD", "quantity": "12", "side": "buy",
+                "sign": "fca8109cb54f1e3cfb809029e0339a19", "time": "1654157837523"}
+        data = json.dumps(data)
+
+        r = requests.post(url=url, headers=headers, data=data, verify=False)
+        print(r.json())
+
+        code = r.json()["code"]
+        msg = r.json()['msg']
+
+        print(code)
+        logging.info(type(r))
+        print(json.loads(r.content))
+        assert code == '0'
+        assert msg == 'Succeed'
+
+
+
 
 
 

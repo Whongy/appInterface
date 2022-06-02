@@ -7,8 +7,8 @@
  BUY: side
  3: volume
 -
- 11: contractId
- 30: leverageLevel
+ 11: 11
+ 30: 30
  OPEN: open
  2: positionType
  17.991: price
